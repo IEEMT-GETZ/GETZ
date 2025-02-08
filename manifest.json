@@ -13,8 +13,8 @@
             "sizes": "64x64"
         },
         {
-            "src": "images/logo-abbreviation.png",
-            "sizes": "640x256"
+            "src": "images/icon-800.png",
+            "sizes": "800x800"
         }
     ]
 }

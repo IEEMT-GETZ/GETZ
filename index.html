@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!-- Desenvolvido por Uziel Ferreira do Prado -->
     <meta charset="UTF-8">
@@ -10,6 +11,7 @@
     <link rel="shortcut icon" href="/GETZ/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="/GETZ/manifest.json">
 </head>
+
 <body>
     <div class="cabecalho">
         <div class="cabecalho-botao botao-inicio botao-selecionado">
@@ -43,12 +45,14 @@
             <h1>Seja bem vindo!</h1>
         </div>
         <div class="mensagem">
-            <p>Olá! Você acessou o website do Grêmio Estudantil Túlio Luiz Zanchet, do Instituto Estadual de Educação Madre Tereza (Seberi/RS).</p>
+            <p>Olá! Você acessou o website do Grêmio Estudantil Túlio Luiz Zanchet, do Instituto Estadual de Educação
+                Madre Tereza (Seberi/RS).</p>
         </div>
         <br>
         <div class="mensagem">
-            <p>Este website pode ser acessado por qualquer navegador, ou então instalado como um aplicativo nativo em computadores e celulares.
-            Siga as instruções abaixo e você poderá acessar este website mesmo sem internet!</p>
+            <p>Este website pode ser acessado por qualquer navegador, ou então instalado como um aplicativo nativo em
+                computadores e celulares.
+                Siga as instruções abaixo e você poderá acessar este website mesmo sem internet!</p>
         </div>
         <br>
         <div class="mensagem instrucoes instrucoes-navegador"></div><br>
@@ -94,15 +98,14 @@
         </div>
     </div>
     <script>
-        if ("serviceWorker" in navigator)
-        {
+        if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/GETZ/sw.js");
             console.log("Service Worker registrado com sucesso.");
         }
-        else
-        {
+        else {
             console.error("Não foi possível registrar o Service Worker.");
         }
     </script>
 </body>
+
 </html>
