@@ -1,0 +1,20 @@
+{
+    "name": "Grêmio Estudantil Túlio Luiz Zanchet",
+    "short_name": "GETZ",
+    "description": "Aplicação desenvolvida para auxiliar no ambiente escolar do Instituto Estadual de Educação Madre Tereza, Seberi/RS, Brasil.",
+    "start_url": "/",
+    "theme_color": "#f2efeb",
+    "background_color": "#f2efeb",
+    "display": "standalone",
+    "icons":
+    [
+        {
+            "src": "favicon.ico",
+            "sizes": "64x64"
+        },
+        {
+            "src": "images/logo-abbreviation.png",
+            "sizes": "640x256"
+        }
+    ]
+}
