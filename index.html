@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GETZ | Grêmio Estudantil Túlio Luiz Zanchet</title>
 
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
     <div class="cabecalho">
         <div class="cabecalho-botao botao-inicio botao-selecionado">
             <button>
-                <img src="../images/logo-full.png" alt="" srcset="">
+                <img src="/images/logo-full.png" alt="" srcset="">
             </button>
         </div>
         <div class="cabecalho-botao botao-sobre">
-            <a href="./sobre.html">
+            <a href="/sobre.html">
                 <button>Sobre</button>
             </a>
         </div>
         <div class="cabecalho-botao botao-membros">
-            <a href="./membros.html">
+            <a href="/membros.html">
                 <button>Membros</button>
             </a>
         </div>
@@ -33,7 +33,7 @@
             </a>
         </div>
         <div class="cabecalho-botao botao-ferramentas">
-            <a href="./ferramentas.html">
+            <a href="/ferramentas.html">
                 <button>Ferramentas</button>
             </a>
         </div>
@@ -59,17 +59,17 @@
         <div class="rodape-colunas">
             <div class="rodape-coluna coluna-paginas">
                 <h1>Páginas</h1>
-                <a href="./inicio.html">Inicio</a>
-                <a href="./sobre.html">Sobre o GETZ</a>
-                <a href="./membros.html">Membros do GETZ</a>
+                <a href="/index.html">Inicio</a>
+                <a href="/sobre.html">Sobre o GETZ</a>
+                <a href="/membros.html">Membros do GETZ</a>
             </div>
             <div class="rodape-coluna coluna-departamentos">
                 <h1>Departamentos</h1>
-                <a href="./membros.html#presidencia">Presidência</a>
-                <a href="./membros.html#secretaria">Secretaria</a>
-                <a href="./membros.html#financeiro">Financeiro</a>
-                <a href="./membros.html#social">Social</a>
-                <a href="./membros.html#esportes">Esportes</a>
+                <a href="/membros.html#presidencia">Presidência</a>
+                <a href="/membros.html#secretaria">Secretaria</a>
+                <a href="/membros.html#financeiro">Financeiro</a>
+                <a href="/membros.html#social">Social</a>
+                <a href="/membros.html#esportes">Esportes</a>
             </div>
             <div class="rodape-coluna coluna-biblioteca">
                 <h1>Biblioteca</h1>
@@ -84,19 +84,19 @@
             </div>
             <div class="rodape-coluna coluna-ferramentas">
                 <h1>Ferramentas</h1>
-                <a href="./ferramentas.html#registro">Registro de Aproveitamentos</a>
-                <a href="./ferramentas.html#calculadora">Calculadora de Aproveitamentos</a>
+                <a href="/ferramentas.html#registro">Registro de Aproveitamentos</a>
+                <a href="/ferramentas.html#calculadora">Calculadora de Aproveitamentos</a>
             </div>
         </div>
         <div class="rodape-informativo">
-            <span><a href="../documentos/Estatuto.docx">Acessar o estatuto vigente</a></span>
+            <span><a href="/documentos/Estatuto.docx">Acessar o estatuto vigente</a></span>
             <span>2025 &copy; Grêmio Estudantil Túlio Luiz Zanchet</span>
         </div>
     </div>
     <script>
         if ("serviceWorker" in navigator)
         {
-            navigator.serviceWorker.register("/getz/sw.js");
+            navigator.serviceWorker.register("/sw.js");
             console.log("Service Worker registrado com sucesso.");
         }
         else
