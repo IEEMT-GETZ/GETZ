@@ -28,17 +28,17 @@ self.addEventListener("fetch", async evt =>
             let CACHED_RESPONSE;
             switch (new URL(evt.request.url).pathname)
             {
-                case "/getz/":
-                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "pages/inicio.html");
+                case "/GETZ/":
+                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "index.html");
                     break;
-                case "/getz/sobre":
-                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "pages/sobre.html");
+                case "/GETZ/sobre":
+                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "sobre.html");
                     break;
-                case "/getz/membros":
-                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "pages/membros.html");
+                case "/GETZ/membros":
+                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "membros.html");
                     break;
-                case "/getz/ferramentas":
-                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "pages/ferramentas.html");
+                case "/GETZ/ferramentas":
+                    CACHED_RESPONSE = await CACHE.match(evt.request.url + "ferramentas.html");
                     break;
                 default:
                     CACHED_RESPONSE = await CACHE.match(evt.request);
