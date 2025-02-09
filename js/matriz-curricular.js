@@ -11,7 +11,7 @@ const MATRIZ_CURRICULAR = {
         });
 
         let db = new Dexie("lista-componentes");
-        db.version(1).stores({componentes: 'Nome, Aproveitamentos, Aprovacao'});
+        db.version(1).stores({ componentes: 'Nome, Aproveitamentos, Aprovacao' });
         db.open().then(function (database)
         {
             database.componentes.each(componente =>
@@ -27,7 +27,17 @@ const MATRIZ_CURRICULAR = {
     },
     CriarComponentesBase: function ()
     {
-        0;
+        const COMPONENTES_BASE =
+            [
+                "Arte", "Biologia", "Educação Física", "Filosofia", "Física", "Geografia",
+                "História", "Língua Inglesa", "Língua Portuguesa", "Literatura", "Matemática",
+                "Química", "Redação", "Resolução de Problemas", "Sociologia"
+            ];
+
+        for (let COMPONENTE of COMPONENTES_BASE)
+        {
+            MATRIZ_CURRICULAR.AdicionarComponente(COMPONENTE);
+        }
     },
     AdicionarComponente: function (nome, aproveitamentos = null, aprovacao = null)
     {
@@ -36,10 +46,10 @@ const MATRIZ_CURRICULAR = {
             Nome: nome,
             Aproveitamentos: aproveitamentos ?? new Array(7).fill(null).map(() => "0.0"),
             Aprovacao: aprovacao ?? false
-        }
+        };
         MATRIZ_CURRICULAR.Componentes.push(OBJETO);
 
-        MATRIZ_CURRICULAR.CriarLinha(MATRIZ_CURRICULAR.Componentes.length-1);
+        MATRIZ_CURRICULAR.CriarLinha(MATRIZ_CURRICULAR.Componentes.length - 1);
     },
     CriarLinha: function (componenteIndex)
     {
@@ -87,7 +97,7 @@ const MATRIZ_CURRICULAR = {
         linha.children[10].classList.remove("editar");
         linha.children[10].classList.add("alterar");
         const INDEX_COMPONENTE = parseInt(linha.children[0].textContent) - 1;
-        
+
         const INPUT_COMPONENTE = document.createElement("input");
         INPUT_COMPONENTE.type = "text";
         INPUT_COMPONENTE.value = linha.children[1].textContent;
@@ -95,10 +105,10 @@ const MATRIZ_CURRICULAR = {
 
         const BOTAO_EXCLUIR = document.createElement("button");
         BOTAO_EXCLUIR.classList.add("excluir-componente");
-        BOTAO_EXCLUIR.addEventListener("click", () => {MATRIZ_CURRICULAR.ExcluirComponente(INDEX_COMPONENTE);});
+        BOTAO_EXCLUIR.addEventListener("click", () => { MATRIZ_CURRICULAR.ExcluirComponente(INDEX_COMPONENTE); });
         const BOTAO_SALVAR = document.createElement("button");
         BOTAO_SALVAR.classList.add("salvar-componente");
-        BOTAO_SALVAR.addEventListener("click", () => {MATRIZ_CURRICULAR.SalvarComponente(linha);});
+        BOTAO_SALVAR.addEventListener("click", () => { MATRIZ_CURRICULAR.SalvarComponente(linha); });
         linha.children[10].replaceChildren(BOTAO_EXCLUIR, BOTAO_SALVAR);
 
         for (let i = 0; i < 6; i++)
@@ -106,12 +116,12 @@ const MATRIZ_CURRICULAR = {
             const INPUT_NOTA = document.createElement("input");
             INPUT_NOTA.type = "text";
             INPUT_NOTA.classList.add("campo-nota");
-            INPUT_NOTA.value = linha.children[2+i].textContent;
-            linha.children[2+i].replaceChildren(INPUT_NOTA);
+            INPUT_NOTA.value = linha.children[2 + i].textContent;
+            linha.children[2 + i].replaceChildren(INPUT_NOTA);
             INPUT_NOTA.addEventListener("input", evt =>
             {
                 if (isNaN(evt.data) || evt.data === null) evt.target.value = "0.0";
-                
+
                 let numeros = evt.target.value.match(/\d/g).join("");
                 if (numeros.length === 1) numeros = "0" + numeros;
                 while (numeros.length > 2 && numeros.startsWith("0")) numeros = numeros.slice(1);
@@ -125,7 +135,7 @@ const MATRIZ_CURRICULAR = {
         const TABELA = document.getElementsByClassName("lista-componentes")[0];
 
         TABELA.children[1].children[index].remove();
-        for (let i = index; i < (TABELA.children[1].children.length-1); i++)
+        for (let i = index; i < (TABELA.children[1].children.length - 1); i++)
         {
             TABELA.children[1].children[i].children[0].textContent = (parseInt(TABELA.children[1].children[i].children[0].textContent) - 1).toString();
         }
@@ -135,7 +145,7 @@ const MATRIZ_CURRICULAR = {
     SalvarComponente: function (linha)
     {
         const INDEX_COMPONENTE = parseInt(linha.children[0].textContent) - 1;
-        
+
         linha.children[10].classList.remove("alterar");
         linha.children[10].classList.add("editar");
         linha.children[10].children[1].remove();
@@ -146,8 +156,8 @@ const MATRIZ_CURRICULAR = {
 
         for (let i = 0; i < 6; i++)
         {
-            const NOTA = linha.children[2+i].children[0].value;
-            linha.children[2+i].replaceChildren(NOTA);
+            const NOTA = linha.children[2 + i].children[0].value;
+            linha.children[2 + i].replaceChildren(NOTA);
 
             MATRIZ_CURRICULAR.Componentes[INDEX_COMPONENTE].Aproveitamentos[i] = NOTA;
         }
@@ -168,13 +178,13 @@ const MATRIZ_CURRICULAR = {
     SalvarLista: function ()
     {
         let db = new Dexie("lista-componentes");
-        db.version(1).stores({componentes: 'Nome, Aproveitamentos, Aprovacao'});
+        db.version(1).stores({ componentes: 'Nome, Aproveitamentos, Aprovacao' });
         db.open().then(function (database)
         {
             database.componentes.clear();
             database.componentes.bulkAdd(MATRIZ_CURRICULAR.Componentes);
         });
     }
-}
+};
 
 MATRIZ_CURRICULAR.Inicializar();
