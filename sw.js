@@ -50,13 +50,10 @@ self.addEventListener("fetch", async evt =>
                 {
                     CACHE.put(evt.request, res.clone());
                 });
-
-                console.log("Retornou o CACHE");
                 
                 return CACHED_RESPONSE;
             }
             
-            console.log("Fez request à rede.")
             const NETWORK_RESPONSE = await fetch(evt.request);
             CACHE.put(evt.request, NETWORK_RESPONSE.clone());
             

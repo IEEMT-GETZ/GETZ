@@ -10,6 +10,7 @@ body {
     --default-color-black: #1a2533;
     --default-color-blue: #004aad;
     --default-color-purple: #7611ad;
+    --default-color-lightGray: #737675;
 }
 body {
     background-color: var(--default-color-white);
