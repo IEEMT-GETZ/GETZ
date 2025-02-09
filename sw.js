@@ -6,8 +6,7 @@ const PRECACHE_ASSETS =
     "/css/",
     "/fonts/",
     "/js/",
-    "/images/",
-    "/pages/"
+    "/images/"
 ];
 
 self.addEventListener("install", evt => 

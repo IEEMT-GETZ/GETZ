@@ -94,15 +94,6 @@ html {
 .mensagem {
     max-width: 60%;
 }
-.instrucoes {
-    max-width: 80%;
-    width: 80%;
-    height: 600px;
-
-    background-color: var(--default-color-gray);
-
-    border-radius: 15px;
-}
 .splash {
     max-width: 60%;
     width: 60%;
