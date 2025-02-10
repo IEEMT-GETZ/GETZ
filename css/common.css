@@ -149,7 +149,7 @@ html {
         
         position: absolute;
         top: 40px;
-        left: -90px;
+        right: 0px;
 
         padding: 12px;
         border-radius: 8px;
@@ -252,5 +252,8 @@ html {
     }
     .rodape-colunas {
         flex-direction: column;
+
+        padding-right: auto;
+        padding-left: 32px;
     }
 }
