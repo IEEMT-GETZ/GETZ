@@ -247,6 +247,9 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
+    .rodape {
+        height: auto;
+    }
     .rodape-colunas {
         flex-direction: column;
     }
