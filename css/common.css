@@ -3,6 +3,8 @@
 }
 body {
     margin: 0;
+
+    overflow-x: hidden;
 }
 :root {
     --default-color-white: #f2efeb;
