@@ -16,12 +16,14 @@
 <body>
     <div class="cabecalho">
         <nav class="menu-cabecalho">
-            <div class="cabecalho-botao botao-inicio botao-selecionado">
-                <button>
-                    <img src="/GETZ/images/logo-full.png" alt="" srcset="">
-                </button>
+            <div class="cabecalho-botao botao-inicio">
+                <a href="/GETZ/">
+                    <button>
+                        <img src="/GETZ/images/logo-full.png" alt="" srcset="">
+                    </button>
+                </a>
             </div>
-            <div class="cabecalho-botao botao-sobre">
+            <div class="cabecalho-botao botao-sobre botao-selecionado">
                 <a href="/GETZ/sobre">
                     <button>Sobre</button>
                 </a>
@@ -43,7 +45,8 @@
             </div>
         </nav>
         <div class="menu-cabecalho-mobile">
-            <div class="menu-logo-mobile"><a href="/GETZ/"><img src="/GETZ/images/logo-abbreviation.png" alt=""></a></div>
+            <div class="menu-logo-mobile"><a href="/GETZ/"><img src="/GETZ/images/logo-abbreviation.png" alt=""></a>
+            </div>
             <div class="hamburguer">
                 <div class="mobile-itens">
                     <a href="/GETZ/">Início</a>
@@ -79,6 +82,7 @@
                 <a href="/GETZ/">Inicio</a>
                 <a href="/GETZ/sobre">Sobre o GETZ</a>
                 <a href="/GETZ/membros">Membros do GETZ</a>
+                <a href="/GETZ/ferramentas">Ferramentas</a>
             </div>
             <div class="rodape-coluna coluna-departamentos">
                 <h1>Departamentos</h1>
@@ -112,11 +116,13 @@
     </div>
     <script src="/GETZ/js/mobile-menu.js"></script>
     <script>
-        if ("serviceWorker" in navigator) {
+        if ("serviceWorker" in navigator)
+        {
             navigator.serviceWorker.register("/GETZ/sw.js");
             console.log("Service Worker registrado com sucesso.");
         }
-        else {
+        else
+        {
             console.error("Não foi possível registrar o Service Worker.");
         }
     </script>

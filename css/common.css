@@ -245,3 +245,9 @@ html {
 
     font-size: 12pt;
 }
+
+@media only screen and (max-width: 600px) {
+    .rodape-colunas {
+        flex-direction: column;
+    }
+}
