@@ -109,8 +109,8 @@ html {
     .menu-logo-mobile {
         display: flex;
 
-        margin-left: 38px;
-        margin-right: 38px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .menu-logo-mobile a img {
         height: 110px;

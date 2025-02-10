@@ -3,8 +3,8 @@ const CACHE_NAME = `getz-${VERSION}`;
 
 const PRECACHE_ASSETS =
     [
-        "/GETZ/fonts/",
-        "/GETZ/images/"
+        "GETZ/fonts/",
+        "GETZ/images/"
         // "/fonts/",
         // "/images/"
     ];
