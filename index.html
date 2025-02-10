@@ -8,36 +8,51 @@
     <title>GETZ | Grêmio Estudantil Túlio Luiz Zanchet</title>
 
     <link rel="stylesheet" href="/GETZ/css/common.css">
+    <link rel="stylesheet" href="/GETZ/css/fonts.css">
     <link rel="shortcut icon" href="/GETZ/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="/GETZ/manifest.json">
 </head>
 
 <body>
     <div class="cabecalho">
-        <div class="cabecalho-botao botao-inicio botao-selecionado">
-            <button>
-                <img src="/GETZ/images/logo-full.png" alt="" srcset="">
-            </button>
-        </div>
-        <div class="cabecalho-botao botao-sobre">
-            <a href="/GETZ/sobre">
-                <button>Sobre</button>
-            </a>
-        </div>
-        <div class="cabecalho-botao botao-membros">
-            <a href="/GETZ/membros">
-                <button>Membros</button>
-            </a>
-        </div>
-        <div class="cabecalho-botao botao-biblioteca">
-            <a href="https://www.skoob.com.br/usuario/10142082-getz">
-                <button>Biblioteca</button>
-            </a>
-        </div>
-        <div class="cabecalho-botao botao-ferramentas">
-            <a href="/GETZ/ferramentas">
-                <button>Ferramentas</button>
-            </a>
+        <nav class="menu-cabecalho">
+            <div class="cabecalho-botao botao-inicio botao-selecionado">
+                <button>
+                    <img src="/GETZ/images/logo-full.png" alt="" srcset="">
+                </button>
+            </div>
+            <div class="cabecalho-botao botao-sobre">
+                <a href="/GETZ/sobre">
+                    <button>Sobre</button>
+                </a>
+            </div>
+            <div class="cabecalho-botao botao-membros">
+                <a href="/GETZ/membros">
+                    <button>Membros</button>
+                </a>
+            </div>
+            <div class="cabecalho-botao botao-biblioteca">
+                <a href="https://www.skoob.com.br/usuario/10142082-getz">
+                    <button>Biblioteca</button>
+                </a>
+            </div>
+            <div class="cabecalho-botao botao-ferramentas">
+                <a href="/GETZ/ferramentas">
+                    <button>Ferramentas</button>
+                </a>
+            </div>
+        </nav>
+        <div class="menu-cabecalho-mobile">
+            <div class="menu-logo-mobile"><a href="/GETZ/"><img src="/GETZ/images/logo-abbreviation.png" alt=""></a></div>
+            <div class="hamburguer">
+                <div class="mobile-itens">
+                    <a href="/GETZ/">Início</a>
+                    <a href="/GETZ/sobre">Sobre</a>
+                    <a href="/GETZ/membros">Membros</a>
+                    <a href="ps://www.skoob.com.br/usuario/10142082-getz">Biblioteca</a>
+                    <a href="/GETZ/ferramentas">Ferramentas</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="conteudo">
@@ -94,12 +109,15 @@
             <span>2025 &copy; Grêmio Estudantil Túlio Luiz Zanchet</span>
         </div>
     </div>
+    <script src="/GETZ/js/mobile-menu.js"></script>
     <script>
-        if ("serviceWorker" in navigator) {
+        if ("serviceWorker" in navigator)
+        {
             navigator.serviceWorker.register("/GETZ/sw.js");
             console.log("Service Worker registrado com sucesso.");
         }
-        else {
+        else
+        {
             console.error("Não foi possível registrar o Service Worker.");
         }
     </script>
