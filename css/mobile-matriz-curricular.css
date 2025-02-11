@@ -1,0 +1,56 @@
+@media only screen and (max-width: 600px) {
+    .splash {
+        max-width: 90%;
+        width: 90%;
+        align-items: center;
+    }
+
+    .lista-componentes {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    td, th {
+        overflow-wrap: break-word;
+        font-size: 10px;
+
+        padding: 2px;
+    }
+
+    .editar button {
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border: none;
+    
+        cursor: pointer;
+        background-image: url("../images/edit-icon.png");
+        background-size: contain;
+    }
+    
+    .alterar button:first-child {
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        border: none;
+    
+        cursor: pointer;
+        background-image: url("../images/x-icon.png");
+        background-size: contain;
+    }
+    .alterar button:last-child {
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        border: none;
+    
+        cursor: pointer;
+        background-image: url("../images/check-icon.png");
+        background-size: contain;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}

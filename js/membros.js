@@ -12,7 +12,7 @@ const MEMBROS =
                     Turma: "3º ano C.M. - T103"
                 },
                 {
-                    Imagem: null,
+                    Imagem: "taine.png",
                     Nome: "Taíne",
                     Cargo: "Vice-Presidente do GETZ",
                     Turma: "3º ano E.M. - T207"
@@ -113,13 +113,29 @@ const MEMBROS =
                     Imagem: null,
                     Nome: "Tobias",
                     Cargo: "Coordenador",
-                    Turma: ""
+                    Turma: "2º ano E.M. - T204"
                 },
                 {
                     Imagem: null,
                     Nome: "Everlin",
                     Cargo: "Integrante",
-                    Turma: ""
+                    Turma: "2º ano C.M. - T102"
+                }
+            ],
+        "civico":
+            [
+                "Departamento Cívico e Cultural",
+                {
+                    Imagem: null,
+                    Nome: "Artur",
+                    Cargo: "Coordenador",
+                    Turma: "2º ano E.M. - T204"
+                },
+                {
+                    Imagem: null,
+                    Nome: "Bianca",
+                    Cargo: "Integrante",
+                    Turma: "2º ano E.M. - T204"
                 }
             ]
     },
@@ -155,8 +171,7 @@ const MEMBROS =
         const DIV_IMAGEM = document.createElement("div");
         DIV_IMAGEM.classList.add("membro-imagem");
         const IMAGEM = document.createElement("img");
-        // IMAGEM.src = MEMBRO.Imagem ?? "/GETZ/images/membros/generic.png";
-        IMAGEM.src = MEMBRO.Imagem ?? "images/membros/generic.png";
+        IMAGEM.src = MEMBRO.Imagem ? "/GETZ/images/membros" + MEMBRO.Imagem :  "/GETZ/images/membros/generic.png";
         DIV_IMAGEM.replaceChildren(IMAGEM);
 
         const DIV_DADOS = document.createElement("div");

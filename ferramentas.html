@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="/GETZ/css/common/widescreen-footer.css">
     <link rel="stylesheet" href="/GETZ/css/common/mobile-header.css">
     <link rel="stylesheet" href="/GETZ/css/common/mobile-footer.css">
-    <link rel="stylesheet" href="/GETZ/css/matriz-curricular.css">
+    <link rel="stylesheet" href="/GETZ/css/widescreen-matriz-curricular.css">
+    <link rel="stylesheet" href="/GETZ/css/mobile-matriz-curricular.css">
     <link rel="shortcut icon" href="/GETZ/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="/GETZ/manifest.json">
 </head>
@@ -89,12 +90,13 @@
                                 <th>Final</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody></tbody>
+                        <tfoot>
                             <tr>
                                 <td colspan="11"></td>
                                 <td class="adicionar-componente"><button>+</button></td>
                             </tr>
-                        </tbody>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -118,6 +120,8 @@
                 <a href="/GETZ/membros#financeiro">Financeiro</a>
                 <a href="/GETZ/membros#social">Social</a>
                 <a href="/GETZ/membros#esportes">Esportes</a>
+                <a href="/GETZ/membros#saude">Saúde e Meio Ambiente</a>
+                <a href="/GETZ/membros#civico">Cívico e Cultural</a>
             </div>
             <div class="rodape-coluna coluna-biblioteca">
                 <h1>Biblioteca</h1>
@@ -145,11 +149,13 @@
     <script src="/GETZ/js/matriz-curricular.js" type="module"></script>
     <script src="/GETZ/js/mobile-menu.js"></script>
     <script>
-        if ("serviceWorker" in navigator) {
+        if ("serviceWorker" in navigator)
+        {
             navigator.serviceWorker.register("/GETZ/sw.js");
             console.log("Service Worker registrado com sucesso.");
         }
-        else {
+        else
+        {
             console.error("Não foi possível registrar o Service Worker.");
         }
     </script>

@@ -14,16 +14,19 @@ const MATRIZ_CURRICULAR = {
         db.version(1).stores({ componentes: 'Nome, Aproveitamentos, Aprovacao' });
         db.open().then(function (database)
         {
-            database.componentes.each(componente =>
+            database.componentes.toArray().then(res =>
             {
-                MATRIZ_CURRICULAR.AdicionarComponente(componente.Nome, componente.Aproveitamentos, componente.Aprovacao);
+                if (res.length === 0) return MATRIZ_CURRICULAR.CriarComponentesBase();
+
+                res.forEach(componente =>
+                {
+                    MATRIZ_CURRICULAR.AdicionarComponente(componente.Nome, componente.Aproveitamentos, componente.Aprovacao);
+                });
             });
         }).catch("NoSuchDatabaseError", function (e) 
         {
             console.error("db não encontrada.", e);
         });
-
-        if (MATRIZ_CURRICULAR.Componentes.length === 0) MATRIZ_CURRICULAR.CriarComponentesBase();
     },
     CriarComponentesBase: function ()
     {
@@ -90,7 +93,7 @@ const MATRIZ_CURRICULAR = {
         TD_EDITAR.replaceChildren(TD_EDITAR_BOTAO);
         TR.appendChild(TD_EDITAR);
 
-        TABELA.children[1].insertBefore(TR, TABELA.children[1].lastElementChild);
+        TABELA.children[1].appendChild(TR);
     },
     EditarComponente: function (linha)
     {
@@ -135,7 +138,7 @@ const MATRIZ_CURRICULAR = {
         const TABELA = document.getElementsByClassName("lista-componentes")[0];
 
         TABELA.children[1].children[index].remove();
-        for (let i = index; i < (TABELA.children[1].children.length - 1); i++)
+        for (let i = index; i < TABELA.children[1].children.length; i++)
         {
             TABELA.children[1].children[i].children[0].textContent = (parseInt(TABELA.children[1].children[i].children[0].textContent) - 1).toString();
         }

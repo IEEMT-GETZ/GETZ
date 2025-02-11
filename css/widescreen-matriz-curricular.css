@@ -13,6 +13,25 @@ td {
     text-align: right;
 }
 
+tr:nth-child(1) th:nth-child(1) {
+    border-top: none;
+    border-left: none;
+}
+tr:nth-child(1) th:last-child {
+    border-top: none;
+    border-right: none;
+}
+tfoot tr td:first-child {
+    border-bottom: none;
+    border-left: none;
+}
+tfoot tr td:last-child {
+    border-bottom: none;
+    border-right: none;
+
+    text-align: center;
+}
+
 .editar button {
     width: 40px;
     height: 40px;

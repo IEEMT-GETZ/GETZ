@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GETZ | Grêmio Estudantil Túlio Luiz Zanchet</title>
 
-    <!-- <link rel="stylesheet" href="/GETZ/css/fonts.css">
+    <!-- <!-- <link rel="stylesheet" href="/GETZ/css/fonts.css">
     <link rel="stylesheet" href="/GETZ/css/common/root.css">
     <link rel="stylesheet" href="/GETZ/css/common/widescreen-header.css">
     <link rel="stylesheet" href="/GETZ/css/common/widescreen-content.css">
@@ -16,19 +16,8 @@
     <link rel="stylesheet" href="/GETZ/css/common/mobile-footer.css">
     <link rel="stylesheet" href="/GETZ/css/widescreen-membros.css">
     <link rel="stylesheet" href="/GETZ/css/mobile-membros.css">
-    <link rel="shortcut icon" href="/GETZ/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/GETZ/favicon.ico" type="image/x-icon"> -->
     <link rel="manifest" href="/GETZ/manifest.json"> -->
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/common/root.css">
-    <link rel="stylesheet" href="css/common/widescreen-header.css">
-    <link rel="stylesheet" href="css/common/widescreen-content.css">
-    <link rel="stylesheet" href="css/common/widescreen-footer.css">
-    <link rel="stylesheet" href="css/common/mobile-header.css">
-    <link rel="stylesheet" href="css/common/mobile-footer.css">
-    <link rel="stylesheet" href="css/widescreen-membros.css">
-    <link rel="stylesheet" href="css/mobile-membros.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -37,8 +26,7 @@
             <div class="cabecalho-botao botao-inicio">
                 <a href="/GETZ/">
                     <button>
-                        <!-- <img src="/GETZ/images/logo-full.png" alt="" srcset=""> -->
-                        <img src="images/logo-full.png" alt="" srcset="">
+                        <img src="/GETZ/images/logo-full.png" alt="" srcset="">
                     </button>
                 </a>
             </div>
@@ -64,8 +52,7 @@
             </div>
         </nav>
         <div class="menu-cabecalho-mobile">
-            <!-- <div class="menu-logo-mobile"><a href="/GETZ/"><img src="/GETZ/images/logo-abbreviation.png" alt=""></a></div> -->
-            <div class="menu-logo-mobile"><a href="/GETZ/"><img src="images/logo-abbreviation.png" alt=""></a></div>
+            <div class="menu-logo-mobile"><a href="/GETZ/"><img src="/GETZ/images/logo-abbreviation.png" alt=""></a></div>
             <div class="hamburguer">
                 <div class="mobile-itens">
                     <a href="/GETZ/">Início</a>
@@ -99,6 +86,8 @@
                 <a href="/GETZ/membros#financeiro">Financeiro</a>
                 <a href="/GETZ/membros#social">Social</a>
                 <a href="/GETZ/membros#esportes">Esportes</a>
+                <a href="/GETZ/membros#saude">Saúde e Meio Ambiente</a>
+                <a href="/GETZ/membros#civico">Cívico e Cultural</a>
             </div>
             <div class="rodape-coluna coluna-biblioteca">
                 <h1>Biblioteca</h1>
@@ -118,19 +107,15 @@
             </div>
         </div>
         <div class="rodape-informativo">
-            <!-- <span><a href="/GETZ/documentos/Estatuto.docx">Acessar o estatuto vigente</a></span> -->
-            <span><a href="documentos/Estatuto.docx">Acessar o estatuto vigente</a></span>
+            <span><a href="/GETZ/documentos/Estatuto.docx">Acessar o estatuto vigente</a></span>
             <span>2025 &copy; Grêmio Estudantil Túlio Luiz Zanchet</span>
         </div>
     </div>
-    <!-- <script src="/GETZ/js/membros.js"></script>
-    <script src="/GETZ/js/mobile-menu.js"></script> -->
-    <script src="js/membros.js"></script>
-    <script src="js/mobile-menu.js"></script>
+    <script src="/GETZ/js/membros.js"></script>
+    <script src="/GETZ/js/mobile-menu.js"></script>
     <script>
         if ("serviceWorker" in navigator) {
-            // navigator.serviceWorker.register("/GETZ/sw.js");
-            navigator.serviceWorker.register("sw.js");
+            navigator.serviceWorker.register("/GETZ/sw.js");
             console.log("Service Worker registrado com sucesso.");
         }
         else {
