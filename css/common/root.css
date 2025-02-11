@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+:root {
+    --default-color-white: #f2efeb;
+    --default-color-gray: #545454;
+    --default-color-black: #1a2533;
+    --default-color-blue: #004aad;
+    --default-color-purple: #7611ad;
+    --default-color-lightGray: #737675;
+}
+
+body {
+    background-color: var(--default-color-white);
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}

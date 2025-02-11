@@ -1,0 +1,77 @@
+@media only screen and (max-width: 600px) {
+    .cabecalho {
+        height: 132px;
+    }
+
+    .menu-cabecalho {
+        display: none;
+    }
+
+    .menu-cabecalho-mobile {
+        display: flex;
+        width: 100%;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-logo-mobile {
+        display: flex;
+
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .menu-logo-mobile a img {
+        height: 110px;
+        width: auto;
+        padding: 4px;
+        margin: auto;
+
+        border-radius: 20px;
+        background-color: var(--default-color-white);
+    }
+
+    .hamburguer {
+        cursor: pointer;
+        margin: auto;
+
+        position: relative;
+
+        width: 40px;
+        height: 40px;
+
+        background-image: url("/GETZ/images/hamburguer.png");
+        background-size: contain;
+    }
+
+    .mobile-itens {
+        display: none;
+    }
+
+    .hamburguer.open .mobile-itens {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 220px;
+
+        position: absolute;
+        top: 40px;
+        right: 0px;
+
+        padding: 12px;
+        border-radius: 8px;
+
+        background-color: var(--default-color-black);
+
+        font-family: Agrandir;
+    }
+
+    .hamburguer.open .mobile-itens a {
+        background-color: var(--default-color-gray);
+        width: 100%;
+
+        padding: 8px;
+        text-align: center;
+    }
+}

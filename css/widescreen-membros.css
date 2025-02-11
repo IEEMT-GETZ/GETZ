@@ -7,7 +7,7 @@
 
     padding: 16px;
     border-radius: 59px;
-    
+
     background-color: var(--default-color-lightGray);
 }
 
@@ -20,6 +20,12 @@
     background-color: var(--default-color-white);
     border-radius: 50%;
     border: solid 3px var(--default-color-black);
+}
+
+.membro-dados {
+    display: flex;
+    width: auto;
+    gap: 80px;
 }
 
 .splash {

@@ -1,0 +1,26 @@
+@media only screen and (max-width: 600px) {
+    .membro {
+        max-width: 75%;
+        flex-direction: column;
+        gap: 12px;
+
+        border-radius: 16%;
+    }
+
+    .membro-dados {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .membro-nome::before,
+    .membro-cargo::before,
+    .membro-turma::before {
+        content: ">> ";
+    }
+
+    .splash {
+        max-width: 90%;
+        width: 90%;
+        align-items: center;
+    }
+}

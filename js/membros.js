@@ -54,6 +54,12 @@ const MEMBROS =
                     Nome: "Verônica",
                     Cargo: "Integrante",
                     Turma: "2º ano E.M. - T204"
+                },
+                {
+                    Imagem: null,
+                    Nome: "Luiz Otávio",
+                    Cargo: "Integrante",
+                    Turma: "2º no E.M. - T204"
                 }
             ],
         "social":
@@ -92,6 +98,28 @@ const MEMBROS =
                     Nome: "Guilherme",
                     Cargo: "Integrante",
                     Turma: "3º ano E.M. - T207"
+                },
+                {
+                    Imagem: null,
+                    Nome: "Michelly",
+                    Cargo: "Integrante",
+                    Turma: "2º ano E.M. - T205"
+                }
+            ],
+        "saude":
+            [
+                "Departamento de Saúde e Meio Ambiente",
+                {
+                    Imagem: null,
+                    Nome: "Tobias",
+                    Cargo: "Coordenador",
+                    Turma: ""
+                },
+                {
+                    Imagem: null,
+                    Nome: "Everlin",
+                    Cargo: "Integrante",
+                    Turma: ""
                 }
             ]
     },
@@ -127,8 +155,12 @@ const MEMBROS =
         const DIV_IMAGEM = document.createElement("div");
         DIV_IMAGEM.classList.add("membro-imagem");
         const IMAGEM = document.createElement("img");
-        IMAGEM.src = MEMBRO.Imagem ?? "/GETZ/images/membros/generic.png";
+        // IMAGEM.src = MEMBRO.Imagem ?? "/GETZ/images/membros/generic.png";
+        IMAGEM.src = MEMBRO.Imagem ?? "images/membros/generic.png";
         DIV_IMAGEM.replaceChildren(IMAGEM);
+
+        const DIV_DADOS = document.createElement("div");
+        DIV_DADOS.classList.add("membro-dados");
 
         const DIV_NOME = document.createElement("div");
         DIV_NOME.classList.add("membro-nome");
@@ -142,7 +174,9 @@ const MEMBROS =
         DIV_TURMA.classList.add("membro-turma");
         DIV_TURMA.textContent = MEMBRO.Turma;
 
-        DIV_MEMBRO.replaceChildren(DIV_IMAGEM, DIV_NOME, DIV_CARGO, DIV_TURMA);
+        DIV_DADOS.replaceChildren(DIV_NOME, DIV_CARGO, DIV_TURMA);
+
+        DIV_MEMBRO.replaceChildren(DIV_IMAGEM, DIV_DADOS);
 
         return DIV_MEMBRO;
     }
