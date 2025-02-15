@@ -35,7 +35,7 @@
         border: none;
     
         cursor: pointer;
-        background-image: url("../images/edit-icon.png");
+        background-image: url("../../images/edit-icon.png");
         background-size: contain;
     }
     
@@ -46,7 +46,7 @@
         border: none;
     
         cursor: pointer;
-        background-image: url("../images/x-icon.png");
+        background-image: url("../../images/x-icon.png");
         background-size: contain;
     }
     .alterar button:last-child {
@@ -56,7 +56,7 @@
         border: none;
     
         cursor: pointer;
-        background-image: url("../images/check-icon.png");
+        background-image: url("../../images/check-icon.png");
         background-size: contain;
     }
 
