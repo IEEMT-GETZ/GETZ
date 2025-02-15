@@ -6,7 +6,7 @@ const MEMBROS =
             [
                 "Presidência",
                 {
-                    Imagem: null,
+                    Imagem: "daniel.png",
                     Nome: "Daniel",
                     Cargo: "Presidente do GETZ",
                     Turma: "3º ano C.M. - T103"
@@ -171,7 +171,7 @@ const MEMBROS =
         const DIV_IMAGEM = document.createElement("div");
         DIV_IMAGEM.classList.add("membro-imagem");
         const IMAGEM = document.createElement("img");
-        IMAGEM.src = MEMBRO.Imagem ? "/GETZ/images/membros/" + MEMBRO.Imagem :  "/GETZ/images/membros/generic.png";
+        IMAGEM.src = "images/membros/" + (MEMBRO.Imagem ?? "generic.png");
         DIV_IMAGEM.replaceChildren(IMAGEM);
 
         const DIV_DADOS = document.createElement("div");
